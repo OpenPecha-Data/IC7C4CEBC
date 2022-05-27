@@ -1,0 +1,168 @@
+id: IC7C4CEBC
+source: https://www2.hf.uio.no/polyglotta/index.php?page=library&bid=2
+source_file: null
+initial_creation_type: input
+imported: '2022-05-27T17:18:56.476382'
+last_modified: '2022-05-27T17:18:56.476408'
+parser: null
+source_metadata:
+  title: 'MSV 1,07: Cīvaravastu'
+  language: bo
+  base:
+    f604B:
+      title: Cīvaravastupiṇḍoddāna
+      base_file: f604B.txt
+      order: 1
+    f3E04:
+      title: Piṇḍoddāna
+      base_file: f3E04.txt
+      order: 2
+    fA436:
+      title: Uddāna
+      base_file: fA436.txt
+      order: 3
+    fDA49:
+      title: CI_Khaṇḍa, the good Minister
+      base_file: fDA49.txt
+      order: 4
+    fA8BB:
+      title: CI_Khaṇḍa’s flight to Vaiśālī
+      base_file: fA8BB.txt
+      order: 5
+    f42CC:
+      title: CI_Vaiśālī and its gaṇa government
+      base_file: f42CC.txt
+      order: 6
+    f46C3:
+      title: CI_Khaṇḍa’s sons, Gopa and Siṃha
+      base_file: f46C3.txt
+      order: 7
+    fC1AE:
+      title: CI_Death of Bimbisāra’s First Queen, Gopa offers his niece Upacelā as
+        Queen
+      base_file: fC1AE.txt
+      order: 8
+    f6747:
+      title: CI_Bimbisāra kills an ascetic, who promises to be born as his son to
+        take revenge
+      base_file: f6747.txt
+      order: 9
+    f3FD3:
+      title: CI_Mahānāma and Āmrapālī
+      base_file: f3FD3.txt
+      order: 10
+    fCCAB:
+      title: CI_Biṃbisāra and Āmrapālī
+      base_file: fCCAB.txt
+      order: 11
+    f7C77:
+      title: CI_Birth of Abhaya
+      base_file: f7C77.txt
+      order: 12
+    f2F22:
+      title: CI_Biṃbisāra and the merchant’s wife
+      base_file: f2F22.txt
+      order: 13
+    fEC45:
+      title: CII_Birth of Jīvaka
+      base_file: fEC45.txt
+      order: 14
+    fAE0A:
+      title: CII_Jīvaka chooses to train as a doctor
+      base_file: fAE0A.txt
+      order: 15
+    fDC9A:
+      title: CII_Jīvaka leaves Ātreya. Jīvaka’s career
+      base_file: fDC9A.txt
+      order: 16
+    fBD79:
+      title: CII_Jīvaka returns to Rājagṛha and his vaidyarājābhiṣeka
+      base_file: fBD79.txt
+      order: 17
+    fC8D6:
+      title: CII_Jīvaka and the Buddha
+      base_file: fC8D6.txt
+      order: 18
+    f4AD8:
+      title: Rules on robes
+      base_file: f4AD8.txt
+      order: 19
+    f8F66:
+      title: Viśākhā
+      base_file: f8F66.txt
+      order: 20
+    f098C:
+      title: Viśākhā’s help and advice
+      base_file: f098C.txt
+      order: 21
+    f5E62:
+      title: Viśākhā gives birth to 32 sons from eggs
+      base_file: f5E62.txt
+      order: 22
+    f940B:
+      title: Viśākhā’s previous life
+      base_file: f940B.txt
+      order: 23
+    f07CD:
+      title: Why Viśākhā’s sons were killed
+      base_file: f07CD.txt
+      order: 24
+    fA4A5:
+      title: Various types of cloth proposed for the cīvara, but turned down
+      base_file: fA4A5.txt
+      order: 25
+    fADF6:
+      title: Svayaṃvara of the Haṃsarāja’s daughter
+      base_file: fADF6.txt
+      order: 26
+    f5DD4:
+      title: Upananda and previous life with two crabs, a jackal and catch of fishes
+      base_file: f5DD4.txt
+      order: 27
+    f9483:
+      title: 'Upananda aquires cloth though not invited, background in previous life:
+        Old Brāhmaṇa stealthily aquirres a garment intended for the youthful Brāhmaṇa'
+      base_file: f9483.txt
+      order: 28
+    f3351:
+      title: Rich trader gives a great gift to a beautiful monastery, though only
+        to one monk, but the Lord says this is not to be regretted
+      base_file: f3351.txt
+      order: 29
+    fDA84:
+      title: Question on gifts by Upālin to the Lord, allowed and not
+      base_file: fDA84.txt
+      order: 30
+    fAA28:
+      title: Question by Upālin to the Lord on the case if a monk or somebody associated
+        dies, who should take over his gear?
+      base_file: fAA28.txt
+      order: 31
+    fA34B:
+      title: Upananda gets a blister on his head, gets medicines, but he dies. Principles
+        for the distribution of his belongings
+      base_file: fA34B.txt
+      order: 32
+    f3925:
+      title: Prefiguration in previos life, a poisoned elephant eaten by many and
+        a jackal, the previous incrnation of Upananda, is killed by a snapping bowstring
+      base_file: f3925.txt
+      order: 33
+    f5770:
+      title: More on sharing the deceased’s goods, Śrāvastī
+      base_file: f5770.txt
+      order: 34
+    fF539:
+      title: More on sharing the deceased’s goods, Śrāvastī
+      base_file: fF539.txt
+      order: 35
+  chapter_to_tile:
+    CI: The descendents of Bimbisāra
+    CII: Jīvaka
+statistics: {}
+quality: {}
+copyright:
+  status: Unknown
+  notice: ''
+  info_url: null
+license: null

@@ -1,0 +1,591 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bibliotheca Polyglotta</title>
+<link rel='stylesheet' type='text/css' href='css/bp.css'>
+<link rel='stylesheet' type='text/css' href='css/diac_doc.css'>
+
+<link rel='stylesheet' type='text/css' href='css/imageGallery.css'>
+<link rel='stylesheet' type='text/css' href='css/ss.css'>
+	      <link rel='stylesheet' type='text/css' href='css/tree_menu.css'>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<!--  <script type="text/javascript" src="js/jqModal.js"></script>-->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/tree_menu.js"></script>
+<!-- <script src="js/analytics_tracking.js" type="text/javascript"></script> -->
+
+
+<!-- <script type="text/javascript" src="js/popupDivhandling.js"></script> -->
+<!--  <script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-imagegallery.js"></script>-->
+</head>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//vrtx.uio.no/js/analytics/v2/analytics.js','ga');
+
+ga('create', 'UA-86407471-1', 'auto');
+ga(function(tracker) {
+
+	// Modifies sendHitTask to hit ipproxy instead of http://www.google-analytics.com directly
+	tracker.set('sendHitTask', function(model) {
+		payload = model.get('hitPayload');
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', '//w3prod-ipproxy.uio.no/collect' +'?' + payload, true);
+		xhr.send();
+	});
+		ga('send', 'pageview');
+});
+</script>
+<body><div class='banner'></div><!-- banner --><div class='uiologo'>
+<a href='http://www.hf.uio.no/'><img src='https://www2.hf.uio.no/polyglotta/hfe.png' border='0'></a></div><!-- uiologo --><div class='clear'></div>
+<div class='smule_tittel'>
+<div class='brodsmuleboks'>You are here: <a href='/polyglotta/index.php' accesskey='1'> BP HOME</a> >  <a href='/polyglotta/index.php?page=library&amp;bid=2' accesskey='1'>TLB</a> > <a href='/polyglotta/index.php
+	?page=volume&amp;vid=1144' accesskey='1'>MSV 1,07: Cīvaravastu</a> > fulltext</div><div class='clear'></div>
+<div class='headline'>MSV 1,07: Cīvaravastu<div class='clear'></div></div><!-- headline -->
+</div><!-- smule_tittel -->
+<!--<div>-->
+
+<h2 class="trigger" id="tr_lang"><a  href="#">Choose languages</a></h2>
+<h2 class="trigger" id="tr_img"><a  href="#">Choose images, etc.</a></h2>
+
+
+<div id="toggle_container_lan">
+
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_lan.php" method="POST">
+
+<div style="float:left; width:auto; text-align:left; margin-left:20px;">
+<h5>Choose languages</h5>
+<ul>
+<input value="Choose all" type="button" onClick="markAll('tr')"><input value="Uncheck all" type="button" onClick="markNone('tr')">
+
+	<li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1144[5755]" value="5755" id="lancheckbox" checked >Sanskrit: MSV II, p.</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1144[5762]" value="5762" id="lancheckbox" checked >Tibetan: Kj ’dul ba ga</label></li><div style="clear:both"></div>
+<input type='submit' name='set_cookie' value='Save view'>
+<div style="clear:both"></div>
+
+</ul>
+<input type="hidden" name="vid" value="1144">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+</div>
+
+<div id="toggle_container_img">
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_img.php" method="POST">
+
+<div style="float:left; width:auto; text-align: left;">
+<h5>Choose display</h5>
+<ul>
+		
+	<li> 
+		<input type='checkbox' name='bilder' checked="checked" > Enable images
+	</li>
+	<li> 
+	<input type='checkbox' onclick="onOffCheckbox();" name='fotnoter' checked="checked"> Enable footnotes
+	<div id="pff" style="display:block" >
+	<ul>
+	<li><input type='radio' name='fotnote_valg'  value='show_a' checked> Show all footnotes</li>
+	<li><input type='radio' name='fotnote_valg'  value='show_h'  > Minimize footnotes</li>
+	</ul>
+	</li>
+	
+	</div>
+	<div style="float:left; width:20em; text-align: left; margin-left:120px ">
+	<div style="clear:both"></div>
+	<input type='submit' name='set_cookie' value='Save view'>
+	<div style="clear:both"></div>
+	</div>
+	
+</ul>
+<input type="hidden" name="vid" value="1144">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+	
+
+
+
+</div>
+</div>
+
+<div class='sok'><form name='Sok' id='FormBlock' action='/polyglotta/index.php' method='get'>
+<input type='hidden' name='page' value='search'>
+<input type='hidden' name='bid' value='2'>
+<input type='hidden' name='vid' value='1144'>
+<div class='sokeboks'>
+<input name='sokefelt' id='sokeboks' type='text' size='30' value=''>
+<input type='submit' name='Sok' value='Search' id='nsubmit'>
+<div class='clear'></div><a class="diacbutton" id="diacbutton" href="#">Diacritica</a><a id="diac2button" class="diac2button"  href="#">Diacritica-help</a><a class="s2button" href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation:SearchHelp">Search-help</a><div class='diacritical' id='diacritical_sign'><div style="text-align: left; ">
+<table class = 'diacritica' width="200" border="1" cellpadding="1" cellspacing="1" id="diacritical">
+    <tbody>
+        <tr>
+            <td style="text-align: center; ">ā</td>
+            <td style="text-align: center; ">ī</td>
+            <td style="text-align: center; ">ū</td>
+            <td style="text-align: center; ">ṛ</td>
+            <td style="text-align: center; ">ṝ</td>
+            <td style="text-align: center; ">ḷ</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ḹ</td>
+            <td style="text-align: center; ">&rsquo;</td>
+            <td style="text-align: center; ">ṃ</td>
+            <td style="text-align: center; ">ḥ</td>
+            <td style="text-align: center; ">ṅ</td>
+            <td style="text-align: center; ">&ntilde;</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ṭ</td>
+            <td style="text-align: center; ">ḍ</td>
+            <td style="text-align: center; ">ṇ</td>
+            <td style="text-align: center; ">ṣ</td>
+            <td style="text-align: center; ">ś</td>
+            <td style="text-align: center; ">ź</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">&scaron;</td>
+            <td style="text-align: center; ">č</td>
+            <td style="text-align: center; ">ǰ</td>
+            <td style="text-align: center; ">&gamma;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+</div></div><!-- diacritical --><div id="ex3a" class="jqmDialog"><div>
+	<span style="font-size:12px;">Note on the transliteration:</span></div>
+<div>
+	<span style="font-size:12px;">The transliteration system of the BP/TLB is based on the Unicode/UTF-8 system. However, there may be difficulties with some of the letters &ndash; particularly on PC/Windows-based systems, but not so much on the Mac. We have chosen the most accepted older and traditional systems of transliteration against, e.g, Wylie for Tibetan, since with Unicode it is possible, in Sanskrit and Tibetan, etc., to represent one sound with one letter in almost all the cases (excepting Sanskrit and Tibetan aspirated letters, and Tibetan tsa, tsha, dza). We thus do not use the Wylie system which widely employs two letters for one sound (ng, ny, sh, zh etc.).</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">Important:</span></div>
+<div>
+	<span style="font-size:12px;">We ask you in particular to note the use of the &rsquo; apostrophe and not the &#39; representing the avagrāha in Sanskrit, and most important the &rsquo;a-chuṅ in Tibetan. On the Mac the &rsquo; is Alt-M.</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">If you cannot find the letters on your key-board, you may click on the link &quot;Diacritica&quot; to access it for your search.</span></div>
+</div><!-- diacritical_doc --><div class='clear'></div><select name='searchmode'><option selected value='phrase'>Search for exact phrase</option>
+<option  value='phraseregex'>Search for exact phrase (regex)</option>
+<option  value='word'>Search for every word in one record</option>
+<option  value='free'>Search for every word fragment in one record</option>
+</select>
+<select name='context'>
+<option ($_GET[context]=="a" ? "selected" : "") value="a"> Search in all libraries</option><option selected value="bTLB">Search in TLB</option><option selected value="v1144">Search in MSV 1,07: Cīvaravastu</option></select><div class='clear'></div><a class='sbutton' href='/polyglotta/index.php?page=asearch&amp;bid=2&amp;vid=1144'>Choose specific texts..</a><div class='clear'></div></div></form></div><!-- sok --><div class='clear'></div><!-- clear --><div id='dcr' class='divControlRead'><div class='venstrefulltekstfelt'><div class='bverknavn'><a href='/polyglotta/index.php?page=volume&amp;vid=1144'>MSV 1,07: Cīvaravastu</a></div><table class="tlvl2">
+					<tr>
+						<td bgcolor="#ffffff"> &nbsp; &nbsp;
+						<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_7627.Verses41-58" border=0 hspace=2>
+						<a href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1144" class="ajax_tree0">Complete text</a>
+						</td>
+					</tr>
+				  </table><input type="hidden" name="tree_top_options" id="tree_top_options" value="135516.Cīvaravastupiṇḍoddāna|135517.Piṇḍoddāna|135518.Uddāna|135519.ThedescendentsofBimbisāra|135530.Jīvaka|135536.Rulesonrobes|135537.Viśākhā|135538.Viśākhā’shelpandadvice|135539.Viśākhāgivesbirthto32sonsfromeggs|135540.Viśākhā’spreviouslife|135541.WhyViśākhā’ssonswerekilled|135542.Varioustypesofclothproposedforthecīvara,butturneddown|135543.SvayaṃvaraoftheHaṃsarāja’sdaughter|135544.Upanandaandpreviouslifewithtwocrabs,ajackalandcatchoffishes|135545.Upanandaaquirescloththoughnotinvited,backgroundinpreviouslife:OldBrāhmaṇastealthilyaquirresagarmentintendedfortheyouthfulBrāhmaṇa|135546.Richtradergivesagreatgifttoabeautifulmonastery,thoughonlytoonemonk,buttheLordsaysthisisnottoberegretted|135547.QuestionongiftsbyUpālintotheLord,allowedandnot|135548.QuestionbyUpālintotheLordonthecaseifamonkorsomebodyassociateddies,whoshouldtakeoverhisgear?|135549.Upanandagetsablisteronhishead,getsmedicines,buthedies.Principlesforthedistributionofhisbelongings|135550.Prefigurationinprevioslife,apoisonedelephanteatenbymanyandajackal,thepreviousincrnationofUpananda,iskilledbyasnappingbowstring|135551.Moreonsharingthedeceased’sgoods,Śrāvastī|135552.Moreonsharingthedeceased’sgoods,Śrāvastī|">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135516.Cīvaravastupiṇḍoddāna" border=0 hspace=2><a id="href_135516.Cīvaravastupiṇḍoddāna" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1962991&level=1&cid=855787" class="ajax_tree0">Cīvaravastupiṇḍoddāna
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135517.Piṇḍoddāna" border=0 hspace=2><a id="href_135517.Piṇḍoddāna" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1962992&level=1&cid=855788" class="ajax_tree0">Piṇḍoddāna
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135518.Uddāna" border=0 hspace=2><a id="href_135518.Uddāna" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1962993&level=1&cid=855789" class="ajax_tree0">Uddāna
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('135519.ThedescendentsofBimbisāra','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_135519.ThedescendentsofBimbisāra" border=0 hspace=2><a id="href_135519.ThedescendentsofBimbisāra" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1962994&level=1&cid=855790" class="ajax_tree0">The descendents of Bimbisāra
+</td></tr></table>
+<div style="display:none;"  id="div_135519.ThedescendentsofBimbisāra">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135520.Khaṇḍa,thegoodMinister" border=0 hspace=2><a id="href_135520.Khaṇḍa,thegoodMinister" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1962994&level=2&cid=855790" class="ajax_tree1">Khaṇḍa, the good Minister
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135521.Khaṇḍa’sflighttoVaiśālī" border=0 hspace=2><a id="href_135521.Khaṇḍa’sflighttoVaiśālī" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1963023&level=2&cid=855802" class="ajax_tree1">Khaṇḍa’s flight to Vaiśālī
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135522.Vaiśālīanditsgaṇagovernment" border=0 hspace=2><a id="href_135522.Vaiśālīanditsgaṇagovernment" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1963036&level=2&cid=855814" class="ajax_tree1">Vaiśālī and its gaṇa government
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135523.Khaṇḍa’ssons,GopaandSiṃha" border=0 hspace=2><a id="href_135523.Khaṇḍa’ssons,GopaandSiṃha" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1963059&level=2&cid=855827" class="ajax_tree1">Khaṇḍa’s sons, Gopa and Siṃha
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135524.DeathofBimbisāra’sFirstQueen,GopaoffershisnieceUpacelāasQueen" border=0 hspace=2><a id="href_135524.DeathofBimbisāra’sFirstQueen,GopaoffershisnieceUpacelāasQueen" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1963103&level=2&cid=855849" class="ajax_tree1">Death of Bimbisāra’s First Queen, Gopa offers his niece Upacelā as Queen
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135525.Bimbisārakillsanascetic,whopromisestobebornashissontotakerevenge" border=0 hspace=2><a id="href_135525.Bimbisārakillsanascetic,whopromisestobebornashissontotakerevenge" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1963148&level=2&cid=855875" class="ajax_tree1">Bimbisāra kills an ascetic, who promises to be born as his son to take revenge
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135526.MahānāmaandĀmrapālī" border=0 hspace=2><a id="href_135526.MahānāmaandĀmrapālī" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1963179&level=2&cid=855891" class="ajax_tree1">Mahānāma and Āmrapālī
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135527.BiṃbisāraandĀmrapālī" border=0 hspace=2><a id="href_135527.BiṃbisāraandĀmrapālī" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1963220&level=2&cid=855912" class="ajax_tree1">Biṃbisāra and Āmrapālī
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135528.BirthofAbhaya" border=0 hspace=2><a id="href_135528.BirthofAbhaya" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1963246&level=2&cid=855933" class="ajax_tree1">Birth of Abhaya
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135529.Biṃbisāraandthemerchant’swife" border=0 hspace=2><a id="href_135529.Biṃbisāraandthemerchant’swife" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1963263&level=2&cid=855945" class="ajax_tree1">Biṃbisāra and the merchant’s wife
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('135530.Jīvaka','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_135530.Jīvaka" border=0 hspace=2><a id="href_135530.Jīvaka" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1963287&level=1&cid=855956" class="ajax_tree0">Jīvaka
+</td></tr></table>
+<div style="display:none;"  id="div_135530.Jīvaka">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135531.BirthofJīvaka" border=0 hspace=2><a id="href_135531.BirthofJīvaka" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1963289&level=2&cid=855957" class="ajax_tree1">Birth of Jīvaka
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135532.Jīvakachoosestotrainasadoctor" border=0 hspace=2><a id="href_135532.Jīvakachoosestotrainasadoctor" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1963317&level=2&cid=855974" class="ajax_tree1">Jīvaka chooses to train as a doctor
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135533.JīvakaleavesĀtreya.Jīvaka’scareer" border=0 hspace=2><a id="href_135533.JīvakaleavesĀtreya.Jīvaka’scareer" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1963431&level=2&cid=856041" class="ajax_tree1">Jīvaka leaves Ātreya. Jīvaka’s career
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135534.JīvakareturnstoRājagṛhaandhisvaidyarājābhiṣeka" border=0 hspace=2><a id="href_135534.JīvakareturnstoRājagṛhaandhisvaidyarājābhiṣeka" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1963545&level=2&cid=856095" class="ajax_tree1">Jīvaka returns to Rājagṛha and his vaidyarājābhiṣeka
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135535.JīvakaandtheBuddha" border=0 hspace=2><a id="href_135535.JīvakaandtheBuddha" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1963666&level=2&cid=856173" class="ajax_tree1">Jīvaka and the Buddha
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135536.Rulesonrobes" border=0 hspace=2><a id="href_135536.Rulesonrobes" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1963716&level=1&cid=856202" class="ajax_tree0">Rules on robes
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135537.Viśākhā" border=0 hspace=2><a id="href_135537.Viśākhā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1963802&level=1&cid=856226" class="ajax_tree0">Viśākhā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135538.Viśākhā’shelpandadvice" border=0 hspace=2><a id="href_135538.Viśākhā’shelpandadvice" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1963991&level=1&cid=856298" class="ajax_tree0">Viśākhā’s help and advice
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135539.Viśākhāgivesbirthto32sonsfromeggs" border=0 hspace=2><a id="href_135539.Viśākhāgivesbirthto32sonsfromeggs" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1964226&level=1&cid=856383" class="ajax_tree0">Viśākhā gives birth to 32 sons from eggs
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135540.Viśākhā’spreviouslife" border=0 hspace=2><a id="href_135540.Viśākhā’spreviouslife" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1964328&level=1&cid=856423" class="ajax_tree0">Viśākhā’s previous life
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135541.WhyViśākhā’ssonswerekilled" border=0 hspace=2><a id="href_135541.WhyViśākhā’ssonswerekilled" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1964365&level=1&cid=856438" class="ajax_tree0">Why Viśākhā’s sons were killed
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135542.Varioustypesofclothproposedforthecīvara,butturneddown" border=0 hspace=2><a id="href_135542.Varioustypesofclothproposedforthecīvara,butturneddown" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1964541&level=1&cid=856523" class="ajax_tree0">Various types of cloth proposed for the cīvara, but turned down
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135543.SvayaṃvaraoftheHaṃsarāja’sdaughter" border=0 hspace=2><a id="href_135543.SvayaṃvaraoftheHaṃsarāja’sdaughter" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1964552&level=1&cid=856534" class="ajax_tree0">Svayaṃvara of the Haṃsarāja’s daughter
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135544.Upanandaandpreviouslifewithtwocrabs,ajackalandcatchoffishes" border=0 hspace=2><a id="href_135544.Upanandaandpreviouslifewithtwocrabs,ajackalandcatchoffishes" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1964610&level=1&cid=856590" class="ajax_tree0">Upananda and previous life with two crabs, a jackal and catch of fishes
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135545.Upanandaaquirescloththoughnotinvited,backgroundinpreviouslife:OldBrāhmaṇastealthilyaquirresagarmentintendedfortheyouthfulBrāhmaṇa" border=0 hspace=2><a id="href_135545.Upanandaaquirescloththoughnotinvited,backgroundinpreviouslife:OldBrāhmaṇastealthilyaquirresagarmentintendedfortheyouthfulBrāhmaṇa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1964706&level=1&cid=856666" class="ajax_tree0">Upananda aquires cloth though not invited, background in previous life: Old Brāhmaṇa stealthily aquirres a garment intended for the youthful Brāhmaṇa
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135546.Richtradergivesagreatgifttoabeautifulmonastery,thoughonlytoonemonk,buttheLordsaysthisisnottoberegretted" border=0 hspace=2><a id="href_135546.Richtradergivesagreatgifttoabeautifulmonastery,thoughonlytoonemonk,buttheLordsaysthisisnottoberegretted" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1964730&level=1&cid=856686" class="ajax_tree0">Rich trader gives a great gift to a beautiful monastery, though only to one monk, but the Lord says this is not to be regretted
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135547.QuestionongiftsbyUpālintotheLord,allowedandnot" border=0 hspace=2><a id="href_135547.QuestionongiftsbyUpālintotheLord,allowedandnot" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1964738&level=1&cid=856689" class="ajax_tree0">Question on gifts by Upālin to the Lord, allowed and not
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135548.QuestionbyUpālintotheLordonthecaseifamonkorsomebodyassociateddies,whoshouldtakeoverhisgear?" border=0 hspace=2><a id="href_135548.QuestionbyUpālintotheLordonthecaseifamonkorsomebodyassociateddies,whoshouldtakeoverhisgear?" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1964761&level=1&cid=856708" class="ajax_tree0">Question by Upālin to the Lord on the case if a monk or somebody associated dies, who should take over his gear?
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135549.Upanandagetsablisteronhishead,getsmedicines,buthedies.Principlesforthedistributionofhisbelongings" border=0 hspace=2><a id="href_135549.Upanandagetsablisteronhishead,getsmedicines,buthedies.Principlesforthedistributionofhisbelongings" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1964767&level=1&cid=856714" class="ajax_tree0">Upananda gets a blister on his head, gets medicines, but he dies. Principles for the distribution of his belongings
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135550.Prefigurationinprevioslife,apoisonedelephanteatenbymanyandajackal,thepreviousincrnationofUpananda,iskilledbyasnappingbowstring" border=0 hspace=2><a id="href_135550.Prefigurationinprevioslife,apoisonedelephanteatenbymanyandajackal,thepreviousincrnationofUpananda,iskilledbyasnappingbowstring" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1964816&level=1&cid=856748" class="ajax_tree0">Prefiguration in previos life, a poisoned elephant eaten by many and a jackal, the previous incrnation of Upananda, is killed by a snapping bowstring
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135551.Moreonsharingthedeceased’sgoods,Śrāvastī" border=0 hspace=2><a id="href_135551.Moreonsharingthedeceased’sgoods,Śrāvastī" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1964828&level=1&cid=856755" class="ajax_tree0">More on sharing the deceased’s goods, Śrāvastī
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135552.Moreonsharingthedeceased’sgoods,Śrāvastī" border=0 hspace=2><a id="href_135552.Moreonsharingthedeceased’sgoods,Śrāvastī" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1144&mid=1964866&level=1&cid=856780" class="ajax_tree0">More on sharing the deceased’s goods, Śrāvastī
+</td></tr></table>
+<script language=javascript>test('135536.Rulesonrobes|')</script><div class='bverknavn'><a href='/polyglotta/index.php?page=library&amp;bid=2'>Back to library</a></div></div><!-- venstrefulltekstfelt --><div class="clear"></div><!-- clear --><div id="nav-menu"><ul>
+  		  <li  id="nav-1"><a class="tabValgt" href="/polyglotta/index.php?page=record&amp;view=record&amp;vid=1144&amp;mid=1963716&amp;level=1">Sentence by sentence view</a></li>
+  		  <li  id="nav-2"><a  href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1144&amp;cid=856202&amp;mid=1963716&amp;level=1">Continuous text view</a></li>
+ 		<li  id="nav-3"><a  href="/polyglotta/admin/index.php?page=fulltext&amp;view=fulltext&amp;vid=1144&amp;cid=856202&amp;mid=1963716&amp;level=1">View in admin</a></li>
+
+  		  </ul></div><div class='clear'></div><!-- clear -->			<script language="javascript" type="text/javascript">
+			var kilderef = '';
+			var tekstid = 0;
+			var tekstid_bilder = 0;
+			var filsti = '';
+			var thumbnail = '';
+			</script>
+		<div class='infofulltekstfelt'><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><div class='kilderef' id='7996972'></div><div class='clear'></div><span id='7996972bi' class='paragraph'>
+							ācaritaṃ jīvakasya yasya kasyacid rājño vā rājamātrasya vā cikitsāṃ karoti sa tasmai grāmaṃ vā grāmavaraṃ vā prayacchati |&nbsp;</span><span id='7996973bi' class='paragraph'>
+						 yāvad apareṇa samayena jīvakena videharājasya cikitsā kṛtā |&nbsp;</span><span id='7996974bi' class='paragraph'>
+						 tena tasmai śatasahasramūlyaṃ bṛhatikāprāvaraṇaṃ dattam |&nbsp;</span><span id='7996975bi' class='paragraph'>
+						 sa tam ādāya (48) yena bhagavāṃs tenopasaṃkrāntaḥ | upasaṃkramya bhagavataḥ pādau śirasā vanditvaikānte niṣaṇṇaḥ |&nbsp;</span><span id='7996976bi' class='paragraph'>
+						 ekānte (250v1) niṣaṇṇo jīvakaḥ kumārabhṛto bhagavantam idam avocat |&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='Tibetan'><div class='kilderef' id='8010370'></div><div class='clear'></div><span id='8010370bi' class='paragraph'>
+							’tsho byed kyi kun tu spyod pa ni rgyal po’am | blon po gaṅ su’i dpyad byas kyaṅ ruṅ ste | des (5) de la groṅ ṅam | groṅ mchog sbyin par byed pa yin no ||&nbsp;</span><span id='8010371bi' class='paragraph'>
+						 ji tsam dus gźan źig na ’tsho byed kyis lus ’phags kyi rgyal po la dpyad byas pa las&nbsp;</span><span id='8010372bi' class='paragraph'>
+						 des de la brgya stoṅ ri ba’i gos be’u ras yug po che źig byin pa daṅ |&nbsp;</span><span id='8010373bi' class='paragraph'>
+						 des de blaṅs nas bcom ldan ’das gaṅ na der soṅ ste phyin (6) pa daṅ bcom ldan ’das kyi źabs gñis la mgo bos phyag byas te phyogs gcig tu ’dug go ||&nbsp;</span><span id='8010374bi' class='paragraph'>
+						 phyogs gcig tu ’dug nas ’tsho byed gźon nus bskyed kyis bcom ldan ’das la ’di skad ces gsol to ||&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='7996977bi' class='paragraph'>
+							ācaritaṃ bhadanta mama yasya rājño vā rājamātrasya vā cikitsāṃ karomi sa me grāmaṃ vā grāmavaraṃ vānuprayacchati |&nbsp;</span><span id='7996978bi' class='paragraph'>
+						 tan mayā videharājasya cikitsā kṛtā | tena me śatasahasramūlyaṃ bṛhatikāprāvaraṇaṃ dattam |&nbsp;</span><span id='7996979bi' class='paragraph'>
+						 tad ahaṃ bhagavate ’nuprayacchāmi | tad bhagavān pratigṛhṇātv anukampām upādāyeti |&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='Tibetan'><span id='8010375bi' class='paragraph'>
+							btsun pa bdag gi kun tu sbyoṅ pa ni rgyal po’am | blon po gaṅ su’i (7) dpyad bgyis kyaṅ ruṅ ste |&nbsp;</span><span id='8010376bi' class='paragraph'>
+						 des bdag la groṅ ṅam | groṅ mchog stsol pa lags pas bdag gis lus ’phags kyi rgyal po la dpyad bgyis pa daṅ des bdag la brgya stoṅ ri ba’i ras źig stsal ba&nbsp;</span><span id='8010377bi' class='paragraph'>
+						 ’di bcom ldan ’das la bdag ’bul źiṅ mchis na |&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='7996980bi' class='paragraph'>
+							pratigṛhṇāti bhagavāṃ jīvakasya kumārabhṛtasyāntikāc chatasahasramūlyaṃ bṛhatikāprāvaraṇam |&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='Tibetan'><span id='8010378bi' class='paragraph'>
+							bcom ldan ’das kyis (ga70a1) thugs brtse ba ñe bar bzuṅ ste ’di bźes su gsol | bcom ldan ’das kyis ’tsho byed gźon nus bskyed las brgya stoṅ ri ba’i gos be’u ras yug po che bźes so ||&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='7996981bi' class='paragraph'>
+							tena khalu samayenāyuṣmān ānando bhagavataḥ pṛṣṭhataḥ sthito ’bhūd vyajanaṃ gṛhītvā bhagavantaṃ vījayan | tatra bhagavān āyuṣmantam ānandam āmantrayate | gṛhāṇānanda śatasahasramūlyaṃ bṛhatikāprāvaraṇaṃ mamārthāya śastralūnaṃ kuruṣveti |&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='Tibetan'><span id='8010379bi' class='paragraph'>
+							de’i tshe tshe daṅ ldan pa kun dga’ bo bcom ldan ’das kyi snam logs na bsil yab thogs te (2) bcom ldan ’das la g-yo bciṅ ’dug go || de nas bcom ldan ’das kyis tshe daṅ ldan pa kun dga’ bol bka’ stsal pa | kun dga’ bo brgya stoṅ ri ba’i gos be’u ras yug po che loṅ la ṅa’i ched du gris dros śig |&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='7996982bi' class='paragraph'>
+							tata āyuṣmān ānando gṛhītvā vistīrṇāvakāśaṃ pṛthivīpradeśaṃ gatvā māpayitum ārabdhaḥ | paśyati bahūni cīvarāṇi saṃpadyante |&nbsp;</span><span id='7996983bi' class='paragraph'>
+						 tatas tena bhagavatas tricīvaraṃ kṛtam ātmanaḥ sāntarottaram āyuṣmataś ca rāhulasya kusūlakaḥ |&nbsp;</span><span id='7996984bi' class='paragraph'>
+						 taṃ khalu varṣāvāsaṃ bhagavataḥ paṃca paṭaśatāni saṃpannāni |&nbsp;</span><span id='7996985bi' class='paragraph'>
+						 bhikṣusaṃghasya cānekāni |&nbsp;</span><span id='7996986bi' class='paragraph'>
+						 bhikṣavo na jānīte kathaṃ pratipattavyam iti |&nbsp;</span><span id='7996987bi' class='paragraph'>
+						 etat prakaraṇaṃ bhikṣavo bhagavata ārocayanti |&nbsp;</span><span id='7996988bi' class='paragraph'>
+						 bhagavān āha | tasmād anujānāmi | bhikṣubhir gṛhapaticīvarakāṇi śastralūnāni durvarṇīkṛtya dhārayitavyāni |&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='Tibetan'><span id='8010380bi' class='paragraph'>
+							de nas tshe daṅ ldan ba kun dga’ bos blaṅs te sa phyogs gsal la (3) yaṅs par soṅ nas gźal bar brtsams pa las chos gos maṅ du ldaṅ par mthoṅ ṅo ||&nbsp;</span><span id='8010381bi' class='paragraph'>
+						 de nas des bcom ldan ’das kyi nas bza’ chos gos gsum daṅ bdag ñid kyi bla gos daṅ bcas pa daṅ | tshe daṅ ldan pa sgra can zin gyi ral chuṅ dpuṅ chad cig byas so |&nbsp;</span><span id='8010382bi' class='paragraph'>
+						 bcom (4) ldan ’das kyis dbyar gyi gnas der ras lṅa brgya brñes śiṅ&nbsp;</span><span id='8010383bi' class='paragraph'>
+						 dge sloṅ gi dge ’dun gyis kyaṅ du ma źig rñed na&nbsp;</span><span id='8010384bi' class='paragraph'>
+						 dge sloṅ rnams kyis ji ltar bsgrub par bya ba ma śes pa’i&nbsp;</span><span id='8010385bi' class='paragraph'>
+						 skabs de bcom ldan ’das la dge sloṅ rnams kyis gsol pa daṅ |&nbsp;</span><span id='8010386bi' class='paragraph'>
+						 bcom ldan ’das kyis bka’ stsal pa | de’i (5) phyir rjes su gnaṅ ste | dge sloṅ rnams kyis khyim pa’i gos gris dras te ka dog ṅan par byas pa bcaṅ bar bya’o ||&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='7996989bi' class='paragraph'>
+							(49) ācaritaṃ rajño bimbisārasya bhikṣuṃ vā bhikṣuṇīṃ vā dṛṣṭvā hastiskandhād avatīrya pādābhivandanaṃ karoti |&nbsp;</span><span id='7996990bi' class='paragraph'>
+						 so ’pareṇa samayena hastinam abhiruhya bhagavataḥ pādābhivandakaḥ saṃprasthitaḥ |&nbsp;</span><span id='7996991bi' class='paragraph'>
+						 yāvat paśyaty antarmārge ājīvakam | sa tasya jātasaṃbhramo hastiskandhād avatīrya pādayor nipatitaḥ |&nbsp;</span><span id='7996992bi' class='paragraph'>
+						 tatra ye aśrāddhās te saṃlakṣayanti |&nbsp;</span><span id='7996993bi' class='paragraph'>
+						 na kevalaṃ devo bhikṣuṣv evābhiprasannaḥ | ājīvakeṣv apy abhiprasanna iti |&nbsp;</span><span id='7996994bi' class='paragraph'>
+						 ye tu śrāddhās te saṃlakṣayanti | nūnaṃ devo bhikṣur iti kṛtvā&nbsp;</span><span id='7996995bi' class='paragraph'>
+						 sasaṃbhramo ’sya hastiskandhād avatīrya pādayor nipatita iti |&nbsp;</span><span id='7996996bi' class='paragraph'>
+						 te sandigdhamanaso rājānam ūcuḥ |&nbsp;</span><span id='7996997bi' class='paragraph'>
+						 kasya devena vandanā kṛtā |&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='Tibetan'><span id='8010387bi' class='paragraph'>
+							rgyal po gzugs can sñiṅ po’i kun tu spyod pa ni dge sloṅ ṅam dge sloṅ ma mthoṅ na glaṅ po che las babs nas rkaṅ pa la phyag byed pa yin no ||&nbsp;</span><span id='8010388bi' class='paragraph'>
+						 de dus gźan (6) źig na glaṅ po che la źon nas bcom ldan ’das kyi źabs gñis la mgo bos phyag byas te | phyogs gcig tu soṅ ba las |&nbsp;</span><span id='8010389bi' class='paragraph'>
+						 ji tsam na lam gyi dbus nas ’tsho ba pa źig mthoṅ na de de la gus ba bskyed de glaṅ po che la babs nas rkaṅ pa gñis la gtugs so ||&nbsp;</span><span id='8010390bi' class='paragraph'>
+						 de na ma dad (7) pa gaṅ yin pa de dag gis bsams pa |&nbsp;</span><span id='8010391bi' class='paragraph'>
+						 lha ni dge sloṅ ’ba’ źig la mṅon par dad pa ma yin no ||&nbsp;</span><span id='8010392bi' class='paragraph'>
+						 dad pa can gaṅ yin pa de dag gis bsams pa ni gdon mi za bar lhas dge sloṅ yin sñam ste |&nbsp;</span><span id='8010393bi' class='paragraph'>
+						 de gus pas glaṅ po che las babs nas rkaṅ pa gñis la gtugs so (ga70b1) sñam nas&nbsp;</span><span id='8010394bi' class='paragraph'>
+						 de rnams yid gñis su gyur te rgyal po la smras pa |&nbsp;</span><span id='8010395bi' class='paragraph'>
+						 lha su la phyag bgyis |&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='7996998bi' class='paragraph'>
+							bhagavataḥ śrāvakasya |&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='Tibetan'><span id='8010396bi' class='paragraph'>
+							bcom ldan ’das kyi ñan thos la’o ||&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='7996999bi' class='paragraph'>
+							deva ājīvaka eṣa na bhagavataḥ śrāvakaḥ |&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='Tibetan'><span id='8010397bi' class='paragraph'>
+							lha de ni bcom ldan ’das kyi ñan thos ma lags te | ’tsho ba pa lags so ||&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='7997000bi' class='paragraph'>
+							atha rājño bimbisārasyaitad abhavat | etad eva me karaṇīyaṃ bhavatv iti |&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='Tibetan'><span id='8010398bi' class='paragraph'>
+							de nas rgyal po gzugs can sñiṅ pos ’di sñam du sems te | bdag (2) gi don ’di kho na gsol lo sñam nas |&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='7997001bi' class='paragraph'>
+							sa yena bhagavāṃs tenopasaṃkrāntaḥ |&nbsp;</span><span id='7997002bi' class='paragraph'>
+						 upasaṃkramya bhagavataḥ pādau śirasā vanditvā ekānte niṣaṇṇaḥ |&nbsp;</span><span id='7997003bi' class='paragraph'>
+						 ekāntaniṣaṇṇo rājā māgadhaḥ śreṇyo bimbisāraḥ bhagavantam idam avocat |&nbsp;</span><span id='7997004bi' class='paragraph'>
+						 ācaritaṃ mama bhadanta bhikṣuṃ vā bhikṣuṇīṃ vā dṛṣṭvā hastiskandhād avatīrya tasya pādābhivandanāṃ kartum |&nbsp;</span><span id='7997005bi' class='paragraph'>
+						 tad ahaṃ saṃjātasaṃbhramo hastiskandhād avatīrya bhikṣur iti kṛtvā ājīvakasya pādayor nipatitaḥ |&nbsp;</span><span id='7997006bi' class='paragraph'>
+						 aho bata bhagavann āryakāṇāṃ cīvarakeṣu kiṃcic cihna prajñāpayed anukampām upādāyeti |&nbsp;</span><span id='7997007bi' class='paragraph'>
+						 adhivāsayati bhagavān rājño bimbisārasya tūṣṇīṃbhāvena |&nbsp;</span><span id='7997008bi' class='paragraph'>
+						 atha rājā bimbisāro bhagavatas tūṣṇīṃbhāvenādhivāsanāṃ viditvā bhagavataḥ pādau śirasā vanditvā prakrāntaḥ |&nbsp;</span><span id='7997009bi' class='paragraph'>
+						 tatra bhagavān bhikṣūn āmantrayate sma haṃbho<a class='fotnote cn' name='FN5755cn1' href='#N5755cn1'><sup>1</sup></a>
+(MSV II 50) bhikṣavaḥ sa ājīvaka<a class='fotnote cn' name='FN5755cn2' href='#N5755cn2'><sup>2</sup></a>
+ upahataś ca yena dṛṣṭasatyasyāntikād vandanā svīkṛteti | (251r1 = GBM 6.814)&nbsp;</span><div style='' id='1' class='note cn'>1.<a class="internt" name='N5755cn1' href='#FN5755cn1'> As Dutt, MS kṣato?</a>&nbsp; 2.<a class="internt" name='N5755cn2' href='#FN5755cn2'> ājīva</a>&nbsp; </div><div class='clear'></div></div></div><div class='textvar' style='width:49%;'><div class='Tibetan'><span id='8010399bi' class='paragraph'>
+							bcom ldan ’das gaṅ na ba der soṅ ste phyin pa daṅ |&nbsp;</span><span id='8010400bi' class='paragraph'>
+						 bcom ldan ’das kyi źabs gñis la mgo bos phyag ’tshal te phyogs gcig tu ’dug go |&nbsp;</span><span id='8010401bi' class='paragraph'>
+						 phyogs gcig tu ’dug nas ma ga dhā’i rgyal po bzo sbyaṅs gzugs can sñiṅ pos (3) bcom ldan ’das la ’di skad ces gsol to ||&nbsp;</span><span id='8010402bi' class='paragraph'>
+						 btsun pa bdag gi kun tu spyod pa ni dge sloṅ ṅam dge sloṅ ma mthoṅ na glaṅ po che la babs nas de’i rkaṅ pa la phyag bgyid pa lags pas |&nbsp;</span><span id='8010403bi' class='paragraph'>
+						 de riṅ bdag gus ba skyes nas glaṅ po che las babs te dge sloṅ lags sñam nas ’tsho ba (4) pa’i rkaṅ pa la gtugs lags kyis |&nbsp;</span><span id='8010404bi' class='paragraph'>
+						 kye ma’o bcom ldan ’das kyis thugs brtse ba ñe bar bzud ste | ’phags pa rnams kyi chos gos rnams la mtshan ma cuṅ zad cig gdab tu gsol |&nbsp;</span><span id='8010405bi' class='paragraph'>
+						 bcom ldan ’das kyis rgyal po gzugs can sñiṅ po la caṅ mi gsuṅ bas gnaṅ ṅo ||&nbsp;</span><span id='8010406bi' class='paragraph'>
+						 de (5) nas rgyal po gzugs can sñiṅ pos bcom ldan ’das caṅ mi gsuṅ bas gnaṅ bar rig nas bcom ldan ’das kyi źabs gñis la mgo bos phyag byas te soṅ ṅo ||&nbsp;</span><span id='8010407bi' class='paragraph'>
+						 de na bcom ldan ’das kyis dge sloṅ rnams la bka’ stsal pa | dge sloṅ dag ’tsho ba pa gaṅ gis bden pa mthoṅ ba (6) las phyag bdag gir byas pa ni ñams te ma ruṅ ṅo ||&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='7997010bi' class='paragraph'>
+							tena khalu samayenāyuṣmān ānando bhagavataḥ pṛṣṭhataḥ sthito ’bhūd vyajanaṃ gṛhītvā bhagavantaṃ vījayan |&nbsp;</span><span id='7997011bi' class='paragraph'>
+						 tatra bhagavān āyuṣmantam ānandam āmantrayate |&nbsp;</span><span id='7997012bi' class='paragraph'>
+						 dṛṣṭas te ānanda vaidehakaḥ parvataḥ |&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='Tibetan'><span id='8010408bi' class='paragraph'>
+							de’i tshe tshe daṅ ldan pa kun dga’ bo bcom ldan ’das kyi snam logs na bsil yab thogs te | bcom ldan ’das la g-yo ba ciṅ ’dug go ||&nbsp;</span><span id='8010409bi' class='paragraph'>
+						 de nas bcom ldan ’das kyis tshe daṅ ldan pa kun dga’ bo la bka’ stsal pa |&nbsp;</span><span id='8010410bi' class='paragraph'>
+						 kun (7) dga’ bo khyod kyis lus ’phags kyi ri bo mthoṅ ṅam |&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='7997013bi' class='paragraph'>
+							no bhadanta |&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='Tibetan'><span id='8010411bi' class='paragraph'>
+							btsun pa ma mthoṅ lags so ||&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='7997014bi' class='paragraph'>
+							gṛhāṇa tathāgatasya cīvarakarṇakam |&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='Tibetan'><span id='8010412bi' class='paragraph'>
+							de bźin gśegs pa’i na bza’ chos gos kyi mtha’ nas zuṅ śig |&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='7997015bi' class='paragraph'>
+							tena gṛhītam |&nbsp;</span><span id='7997016bi' class='paragraph'>
+						 atha bhagavān tata eva riddhyā upari vihāyasā prakrāntaḥ | rājagṛhe ’ntarhito vaidehake parvate prātiṣṭhata |&nbsp;</span><span id='7997017bi' class='paragraph'>
+						 tena khalu samayena māgadhakānāṃ manuṣyāṇāṃ kṣetrāṇi samāni samopavicārāṇi āvalīvinibaddhāni bhaktiracanāviśeṣavicitrāṇi dṛṣṭvā ca punar āyuṣmantam ānandam āmantrayate |&nbsp;</span><span id='7997018bi' class='paragraph'>
+						 dṛṣṭāni te ānanda etāni kṣetrāṇi samāni samopavicārāṇy āvalīvinibaddhāni bhaktiracanāviśeṣavicitrāṇi |&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='Tibetan'><span id='8010413bi' class='paragraph'>
+							des bzuṅ ba daṅ |&nbsp;</span><span id='8010414bi' class='paragraph'>
+						 de nas bcom ldan ’das kyis rgyal po’i khab nas mi snaṅ bar mdzad pas de ñid nas rdzu ’phrul gyis (ga71a1) steṅ gi nam mkha’ las gśegs nas lus ’phags kyi ri bo la bźugs so ||&nbsp;</span><span id='8010415bi' class='paragraph'>
+						 de’i tshe ma ga dhā’i mi rnams kyi źiṅ mñam źiṅ ñe ’khor mñam pa rnaṅ gi khyad par sna tshogs dag rnaṅ sgal gyis ’brel ciṅ mdzes pa dag gzigs nas tshe daṅ ldan pa kun dga’ (2) bo la bka’ stsal pa |&nbsp;</span><span id='8010416bi' class='paragraph'>
+						 kun dga’ bo khyod kyis źiṅ mñam źiṅ ñe ’khor mñam la rnaṅ gi khyad par sna tshogs pa dag rnad sgal gyis ’brel par mdzes pa de dag mthoṅ ṅam |&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='7997019bi' class='paragraph'>
+							dṛṣṭāni bhadanta |&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='Tibetan'><span id='8010417bi' class='paragraph'>
+							btsun pa mthoṅ lags so ||&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='7997020bi' class='paragraph'>
+							tasmād ānanda anenākāreṇa bhikṣubhiś cīvarāṇi chitvā setavyāni |&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='Tibetan'><span id='8010418bi' class='paragraph'>
+							kun dga’ bo de lta bsan dge sloṅ rnams kyis ’di lta bur chos gos (3) dag dras te drub par bya’o ||&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='7997021bi' class='paragraph'>
+							sthavirānandena bhikṣūṇām ārocitam |&nbsp;</span><span id='7997022bi' class='paragraph'>
+						 yuṣmābhir anenākāreṇa cīvarakāni pāṭayitvā setavyānīti |&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='Tibetan'><span id='8010419bi' class='paragraph'>
+							gnas brtan kun dga’ bos dge sloṅ rnams la smras pa |&nbsp;</span><span id='8010420bi' class='paragraph'>
+						 khyed kyis ’di lta bur chos gos rnams dros la drub śig |&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='7997023bi' class='paragraph'>
+							bhikṣavaḥ pāṭayitvā cīvarāṇi setum ārabdhāḥ |&nbsp;</span><span id='7997024bi' class='paragraph'>
+						 ekena pārśvena patramukhāni pātayanti | na śobhante |&nbsp;</span><span id='7997025bi' class='paragraph'>
+						 āyuṣmān ānandaḥ saṃlakṣayati |&nbsp;</span><span id='7997026bi' class='paragraph'>
+						 kiṃ cāpi bhagavatā nānujñātam |&nbsp;</span><span id='7997027bi' class='paragraph'>
+						 (51) sthānam etad vidyate yad etad eva pratyayaṃ kṛtvā anujñāsyatīti |&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='Tibetan'><span id='8010421bi' class='paragraph'>
+							dge sloṅ rnams kyis chos gos dag dras te drub par brtsams pa na&nbsp;</span><span id='8010422bi' class='paragraph'>
+						 snam bu rnams kha phyogs gcig tu bstan pas mi mdzes nas&nbsp;</span><span id='8010423bi' class='paragraph'>
+						 tshe (4) daṅ ldan pa kun dga’ bos bsams pa |&nbsp;</span><span id='8010424bi' class='paragraph'>
+						 bcom ldan ’das kyis bka’ ma stsal mod kyi |&nbsp;</span><span id='8010425bi' class='paragraph'>
+						 ’di kho nas rkyen byas nas gnaṅ bar ’gyur pa’i gnas de yod do sñam nas&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='7997028bi' class='paragraph'>
+							tenobhayapārśvayoḥ patramukhāni dattāni | tathāpy anupātaṃ vinā na śobhate ity anupāto dattaḥ |&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='Tibetan'><span id='8010426bi' class='paragraph'>
+							des snam bu rnams kha phyogs gñis kar bstan na ’on kyaṅ mtha’ skor med pas mdzes par ma gyur nas mtha’ (5) skor byas so ||&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='7997029bi' class='paragraph'>
+							tataḥ kṛtaniścitaṃ bhagavata upanāmitam |&nbsp;</span><span id='7997030bi' class='paragraph'>
+						 bhagavān āha | sādhu sādhv ānanda yan mayā nānujñātaṃ tat tvayā vijātam |&nbsp;</span><span id='7997031bi' class='paragraph'>
+						 tasmād anujānāmi bhikṣubhir anenākāreṇa cīvarāṇi chitvā sevitavyāni |&nbsp;</span><span id='7997032bi' class='paragraph'>
+						 bhikṣava evaikaṃ cīvaraṃ chitvā syūtvā dhāvayituṃ pravṛttāḥ | avaśiṣṭāny acchinnāni |&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='Tibetan'><span id='8010427bi' class='paragraph'>
+							de nas byas śiṅ zin pa daṅ bcom ldan ’das la phul lo ||&nbsp;</span><span id='8010428bi' class='paragraph'>
+						 bcom ldan ’das kyis bka’ ma stsal pa | kun dga’ bo legs so legs so || ṅas gaṅ gi phyir bka’ stsal pa | de khyod kyis śes te |&nbsp;</span><span id='8010429bi' class='paragraph'>
+						 de lta bas na dge sloṅ rnams kyis ’di lta bur chos gos (6) rnams dras la drub bar bya’o ||&nbsp;</span><span id='8010430bi' class='paragraph'>
+						 dge sloṅ rnams kyis chos gos dras śiṅ dru bas pa re re bcaṅs nas lhag ma ni dras so ||&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='7997033bi' class='paragraph'>
+							tato bhagavān magadheṣu janapadeṣu cārikāṃ carann āṭavikām anuprāptaḥ |&nbsp;</span><span id='7997034bi' class='paragraph'>
+						 āṭavikāyāṃ viharaty agrāṭavike dāve |&nbsp;</span><span id='7997035bi' class='paragraph'>
+						 āṭavikā nadīsamīpasaṃyogāc chītalā pravātā ca |&nbsp;</span><span id='7997036bi' class='paragraph'>
+						 bhagavatā prathame yāme antarvāsaḥ prāvṛtaḥ | madhyame yāme uttarāsaṅgaḥ |&nbsp;</span><span id='7997037bi' class='paragraph'>
+						 paścime yāme āyuṣmantam ānandam āmantrayate |&nbsp;</span><span id='7997038bi' class='paragraph'>
+						 anuprayaccha me ānanda saṃghāṭīm iti |&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='Tibetan'><span id='8010431bi' class='paragraph'>
+							de nas bcom ldan ’das yul ma ga dhā’i ljoṅs rgyu źiṅ gśegs te | ’brog gnas su byon nas&nbsp;</span><span id='8010432bi' class='paragraph'>
+						 ’brog gnas na ’brog gnas kyi tshal na bźugs so ||&nbsp;</span><span id='8010433bi' class='paragraph'>
+						 (7) ’brog gnas ’bab chu daṅ ñe bar graṅ źiṅ rluṅ ldaṅ bar gyur nas |&nbsp;</span><span id='8010434bi' class='paragraph'>
+						 bcom ldan ’das kyis thun daṅ po la mthaṅ so gsol to | thun par pa la bla gos gsol to ||&nbsp;</span><span id='8010435bi' class='paragraph'>
+						 thun tha ma la tshe daṅ ldan pa kun dga’ bo la bka’ stsal pa |&nbsp;</span><span id='8010436bi' class='paragraph'>
+						 kun dga’ bo ṅal snam sbyar gyis g-yogs śig | (ga71b1)&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='7997039bi' class='paragraph'>
+							tata āyuṣmatānandena hastau prakṣālya bhagavata upariṣṭād dattā saṃghāṭī |&nbsp;</span><span id='7997040bi' class='paragraph'>
+						 sā rātrir bhagavatā tricīvareṇātināmitā |&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='Tibetan'><span id='8010437bi' class='paragraph'>
+							de nas tshe daṅ ldan pa kun dga’ bos lag pa gñis bkrus nas snam sbyar gyis bcom ldan ’das kyi steṅ du g-yogs te |&nbsp;</span><span id='8010438bi' class='paragraph'>
+						 bcom ldan ’das kyis na bza’ chos gos gsum gyis mtshan mo de ’das bar mdzad do ||&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='7997041bi' class='paragraph'>
+							tataḥ prabhātāyāṃ rajanyāṃ saṃlakṣayati |&nbsp;</span><span id='7997042bi' class='paragraph'>
+						 ye kecil loke sukumārakāḥ sukhaiṣiṇaḥ | ahaṃ teṣām agraḥ |&nbsp;</span><span id='7997043bi' class='paragraph'>
+						 tad ahaṃ śaknomi tricīvareṇa yāpayituṃ kiṃ punar me śrāvakā iti viditvā bhikṣūn āmantrayate sma |&nbsp;</span><span id='7997044bi' class='paragraph'>
+						 tasmāt tarhi bhikṣavo bhikṣubhiś chinnaṃ tricīvaraṃ dhārayitavyam iti |&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='Tibetan'><span id='8010439bi' class='paragraph'>
+							de nas nam naṅ sa nas dgoṅs pa&nbsp;</span><span id='8010440bi' class='paragraph'>
+						 ’jig rten śin tu skyid pa (2) bde ba ’dod pa gaṅ yin pa su yaṅ ruṅ de rnams kyi mchog ni ṅa yin te |&nbsp;</span><span id='8010441bi' class='paragraph'>
+						 ṅa yaṅ chos gos gsum gyis ’tsho bar spyad na ṅa’i ñan thos rnams lta smos kyaṅ ci dgos sñam du dgoṅs nas dge sloṅ rnams la bka’ stsal pa |&nbsp;</span><span id='8010442bi' class='paragraph'>
+						 dge sloṅ dag de lta bas na dge sloṅ rnams kyis dras pa’i (3) chos gos gsum bcaṅ bar bya’o ||&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='7997045bi' class='paragraph'>
+							(52) uktaṃ bhagavatā chinnaṃ tricīvaraṃ dhārayitavyam iti |&nbsp;</span><span id='7997046bi' class='paragraph'>
+						 anyatamasya bhikṣos tricīvaraṃ nāsti | tasya namataṃ saṃpannam | sa tac chettum ārabdhaḥ |&nbsp;</span><span id='7997047bi' class='paragraph'>
+						 bhagavāṇś ca taṃ pradeśam anuprāptaḥ pṛcchati |&nbsp;</span><span id='7997048bi' class='paragraph'>
+						 bhikṣo kim idam | uktaṃ bhadanta bhagavatā bhikṣuṇā chinnaṃ tricīvaraṃ dhārayitavyam iti |&nbsp;</span><span id='7997049bi' class='paragraph'>
+						 mama (251v1) tṛtīyaṃ cīvaraṃ nāsti |&nbsp;</span><span id='7997050bi' class='paragraph'>
+						 paryeṣamāṇasya me idaṃ namataṃ saṃpannam | chitvā cīvaraṃ karomi |&nbsp;</span><span id='7997051bi' class='paragraph'>
+						 naitad bhikṣo chedanārham api tv āsīvakārham |&nbsp;</span><span id='7997052bi' class='paragraph'>
+						 sīvakaṃ kṛtvā dhāraya | ity uktā prakrāntaḥ |&nbsp;</span><span id='7997053bi' class='paragraph'>
+						 bhikṣusaṃghaṃ sannipātya purastād bhikṣusaṃghasya prajñapta evāsane niṣaṇṇaḥ |&nbsp;</span><span id='7997054bi' class='paragraph'>
+						 niṣadya bhagavān bhikṣūn āmantrayate sma |&nbsp;</span><span id='7997055bi' class='paragraph'>
+						 amukasya bhikṣavo bhikṣoś cīvaraṃ nāstīti namataṃ chedayatīti |&nbsp;</span><span id='7997056bi' class='paragraph'>
+						 tasmāt tarhi bhikṣavaḥ paṃcāchedyāni |&nbsp;</span><span id='7997057bi' class='paragraph'>
+						 sarvaṃ namataṃ | sarvaṃ prāvārakaṃ | sarvaṃ kocavaṃ | sarvaṃ lelohitaṃ | sarvaṃ sthūlakambalañ ceti | āsīvakāṃs tu datvā dhārayitavyam |&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='Tibetan'><span id='8010443bi' class='paragraph'>
+							bcom ldan ’das kyis dras pa’i chos gos gsum bcaṅ bar bya’o źes bka’ stsal na |&nbsp;</span><span id='8010444bi' class='paragraph'>
+						 dge sloṅ źig la chos go sa gsum pa med nas des phyiṅ pa źig rñed nas des de dra bas brtsams so ||&nbsp;</span><span id='8010445bi' class='paragraph'>
+						 bcom ldan ’das kyaṅ phyogs der gśegs nas (4) smras pa |&nbsp;</span><span id='8010446bi' class='paragraph'>
+						 dge sloṅ ’di ci yin | btsun pa bcom ldan ’das kyis dge sloṅ rnams kyis dras pa’i chos gos gsum bcaṅ bar bya’o źes bka’ stsal na |&nbsp;</span><span id='8010447bi' class='paragraph'>
+						 bdag la chos gos gsum pa ma mchis nas btsal ba las |&nbsp;</span><span id='8010448bi' class='paragraph'>
+						 bdag gis phyiṅ pa ’di rñed de dras nas chos gos bgyi’o ||&nbsp;</span><span id='8010449bi' class='paragraph'>
+						 (5) dge sloṅ ’di ni dra ba’i ’os ma yin no || ’on kyaṅ lhan thabs kyis glan pa’i ’os yin pas&nbsp;</span><span id='8010450bi' class='paragraph'>
+						 lhan thabs kyis glan nas bcaṅ bar bya’o źes bka’ stsal nas gśegs te |&nbsp;</span><span id='8010451bi' class='paragraph'>
+						 dge sloṅ gi dge ’dun bsdus nas dge sloṅ dge ’dun gyi guṅ la gdan bśams pa ñid la bźugs (6) so ||&nbsp;</span><span id='8010452bi' class='paragraph'>
+						 bźugs nas bcom ldan ’das kyis dge sloṅ rnams la bka’ stsal pa |&nbsp;</span><span id='8010453bi' class='paragraph'>
+						 dge sloṅ dag dge sloṅ che ge mo źes byab la chos gos med nas phyiṅ pa la ’dra bar byed kyis |&nbsp;</span><span id='8010454bi' class='paragraph'>
+						 dge sloṅ dag de lta bas nas na mi dra ba ni lṅa ste |&nbsp;</span><span id='8010455bi' class='paragraph'>
+						 phyiṅ pa thams cad daṅ | snam bu thams (7) cad daṅ | be’u ras thams cad daṅ | seṅ ras thams cad daṅ | kla ma thams cad de | lhan thabs kyis glan nas bcaṅ bar bya’o ||&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class=''><span id='bi' class=''>
+							&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "";
+							kilderef = "  ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'></div><div class='textvar' style='width:49%;'></div></div><div class='clear'></div><div class="fontboks"><a onClick=onOffdiv('permlink') name="permlink" href="#permlink">Permanent link</a></div><div class='clear'></div><div class='perm_felt' id='permlink'>http://www2.hf.uio.no/common/apps/permlink/permlink.php?app=polyglotta&amp;context=ctext&amp;uid=b8a40ee5-dd58-11ea-bba8-0050569f23b2</div></div></div><!-- infofelt --></div><!-- divControl --><div class="clear"></div>
+<div style="clear:both"></div><div class="signatur"><div class="signatur_left">
+		<a href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation">Go to Wiki Documentation</a></br>Enhet: <a HREF=http://www.hf.uio.no>Det humanistiske fakultet</a> &nbsp; Utviklet av: <a href="http://www.hf.uio.no/tjenester/it">IT-seksjonen ved HF</a></div><!--signatur_left -->
+		<div class="signatur_right"><a href="/polyglotta/admin/index.php">Login</a></div>
+		<div style="clear:both"></div></div>
+</body></html><SCRIPT LANGUAGE="JAVASCRIPT">
+	
+	$("#tr_IA").click(function(){
+	    if ($("#toggle_container_IA").is(':hidden'))
+	    	$("#toggle_container_IA").show();
+	    else{
+	        $("#toggle_container_IA").hide();
+	    }
+	    return false;
+		});
+
+	$("#tr_lang").click(function(){
+	    if ($("#toggle_container_lan").is(':hidden'))
+	    	$("#toggle_container_lan").show();
+	    else{
+	        $("#toggle_container_lan").hide();
+	    }
+	    return false;
+	});
+
+	$("#tr_img").click(function(){
+	    if ($("#toggle_container_img").is(':hidden'))
+	    	$("#toggle_container_img").show();
+	    else{
+	        $("#toggle_container_img").hide();
+	    }
+	    return false;
+	});
+
+	$("#diac2button").click(function(){
+	   if ($("#ex3a").is(':hidden')){
+		   $("#ex3a").show();
+	       $("#diac2button").html("Hide&#32Diacritica-help");
+	   }else{
+	       $("#ex3a").hide();
+	       $("#diac2button").html("Diacritica-help");
+	   }
+	   return false;
+	});
+
+	$("#diacbutton").click(function(){
+	   if ($("#diacritical_sign").is(':hidden')){
+		   	$("#diacritical_sign").show();
+	      	$("#diacbutton").html("Hide&#32diacritica");
+	   }else{
+	        $("#diacritical_sign").hide();
+	        $("#diacbutton").html("Diacritica");
+	   }
+	   return false;
+    });
+
+	$('#toggle_container_IA').click(function(e) {
+	   e.stopPropagation();
+	});
+
+	$('#toggle_container_lan').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#toggle_container_img').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#ex3a').click(function(e) {
+	    e.stopPropagation();
+	});
+
+	$('#diacritical_sign').click(function(e) {
+        e.stopPropagation();
+    });
+
+	//Kode for å sette inn diakritiske tegn
+	$('#diacritical > tbody > tr > td').click(function() {
+	  	//alert('red');
+		$("#sokeboks").val($("#sokeboks").val() + $(this).text());
+	});
+
+	$('.diac2button').text(($('.diacbutton').text() == 'Diacritica-help') ? 'Hide Diacritica-help' : 'Diacritica-help');
+	
+	//Lukker alle åpnede pop'uper ved klikk på siden
+	$(document).click(function() {
+		$('#toggle_container_IA').hide();
+	    
+        $('#toggle_container_lan').hide();
+    
+        $('#toggle_container_img').hide();
+   
+   		$('#diacritical_sign').hide();
+   		$("#diacbutton").html("Diacritica");
+   
+       	$('#ex3a').hide();
+       	$("#diac2button").html("Diacritica-help");
+   });
+	</SCRIPT>
